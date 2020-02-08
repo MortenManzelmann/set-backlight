@@ -4,10 +4,24 @@
 #set -x
 
 # constants
-basePath=/sys/class/backlight/intel_backlight/
-brightnessFile=$basePath/brightness
+INTERACTIV=0
+choice=0
+basePath=/sys/class/backlight
+graphicCards=($(ls -d $basePath/*))
+
+if [[ $INTERACTIV -eq 1 ]]; then
+  printf "Choose your graphic card\n"
+
+  for i in "${!graphicCards[@]}"; do 
+     printf "%s\t%s\n" "$i" "${graphicCards[$i]}"
+  done
+
+  read choice
+fi
+
+brightnessFile=${graphicCards[$choice]}/brightness
 currentValue=$(cat $brightnessFile)
-maxValue=$(cat $basePath/max_brightness)
+maxValue=$(cat ${graphicCards[$choice]}/max_brightness)
 minValue=$(($maxValue / 100))
 helpMessage="Call: set-backlight [OPTION] value
 
