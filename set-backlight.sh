@@ -19,7 +19,10 @@ helpMessage="Call: set-backlight [OPTION] value
   -h, --help        Display this help
 
 
-This is kiss aproache to solve a problem encountered by the usage of an intel backlight drive. it's straight forward assigning values to the system files. Feel free to use, change or improve this script for your own usecase."
+This is kiss aproache to solve a problem encountered by the usage of an intel backlight drive. it's straight forward assigning values to the system files. Feel free to use, change or improve this script for your own usecase.
+
+Github: https://github.com/MortenManzelmann/set-backlight
+"
 
 # script arguments
 option=$1;
