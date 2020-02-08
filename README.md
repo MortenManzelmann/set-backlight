@@ -1,7 +1,28 @@
 # set-backlight 
 
+## Introduction
 This is a small script to set the backlight brignthness for intel\_backlight systems. it was the easies way to get what i want. it can't do much and it shall not do much. you can make your screen brighter or darker on an absolute or relativ scale or increase/decrease the brightness by a relative value. If that is not enough do it and expand functionallity. If you like to change the program to your flavor please forg it, if you want to help me develop the script please create a merge request for your changes. Hope it helps some people struggling with the same problem and searching for an **K.I.S.S.** solution.   
 
+## Install
+
+### Clone the Repository
+``` sh
+git clone git@github.com:MortenManzelmann/set-backlight.git
+ 
+or
+
+git clone https://github.com/MortenManzelmann/set-backlight.git
+```
+
+### Download the zip 
+https://github.com/MortenManzelmann/set-backlight/archive/master.zip
+
+### Create symlink to use it where you need it
+``` sh
+$(cd /usr/bin && sudo ln -s <download dir>/set-backlight/set-backlight.sh set-backlight) ])
+```
+
+## Help
 ``` sh
 Call: set-backlight [OPTION] value
 
